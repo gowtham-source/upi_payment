@@ -24,9 +24,6 @@ VRS Bus Booking System🌹'''
     send_whatsapp_message(message, ph_no)
 
 
-try:
-    send_msg(name, from1, to1, date1, selected_seats, ph_no)
-    st.info(
-        f'### Hi, {name} Your booking has been confirmed & the transaction id is {transaction_id}')
-except Exception as e:
-    st.error(f'### Hi, {name} Your booking has not been confirmed due to {e}')
+send_msg(name, from1, to1, date1, selected_seats, ph_no)
+st.info(
+    f'### Hi, {name} Your booking has been confirmed & the transaction id is {transaction_id}')
