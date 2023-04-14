@@ -24,6 +24,7 @@ VRS Bus Booking System🌹'''
     send_whatsapp_message(message, ph_no)
 
 
+st.write(transaction_id, name, ph_no, from1, to1, date1, selected_seats)
 send_msg(name, from1, to1, date1, selected_seats, ph_no)
 st.info(
     f'### Hi, {name} Your booking has been confirmed & the transaction id is {transaction_id}')
