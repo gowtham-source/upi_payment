@@ -1,6 +1,6 @@
 import streamlit as st
 from mail import send_email
-from whatsapp import send_msg
+from whatsapp import send_whatsapp_message
 
 transaction_id = st.experimental_get_query_params()['id1'][0]
 name = st.experimental_get_query_params()['id2'][0]
@@ -21,7 +21,7 @@ send_email(
     to_city=to1,
     seat_no=selected_seats
 )
-send_msg(name, from1, to1, date1, selected_seats, ph_no)
+send_whatsapp_message(name, from1, to1, date1, selected_seats, ph_no)
 
 st.write("## Thank you for choosing our bus reservation system for your upcoming trip. We are happy to inform you that your reservation has been confirmed and your seat is secured.")
 st.info("### Your ticket has been sent to your email address. Please check your email.")
